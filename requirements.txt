@@ -1,0 +1,9 @@
+selenium
+pytest
+pytest-html
+pytest-xdist
+openpyxl
+allure-pytest
+pytest-rerunfailures
+pytest-sugar
+pytest-faker

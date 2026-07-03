@@ -4,14 +4,14 @@ from  selenium.webdriver.support import expected_conditions
 
 
 class Login_page_class:
-    txt_username_xpath = "//input[@placeholder='Username']"
-    txt_password_xpath = "//input[@placeholder='Password']"
+    txt_username_xpath = "//input[@placeholder='username']"
+    txt_password_xpath = "//input[@placeholder='password']"
     btn_login_xpath = "//button[@type='submit']"
     validate_login_xpath = "//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']"
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait=WebDriverWait(self.driver, 10)
+        self.wait=WebDriverWait(self.driver, 20)
     def enter_username(self,username):
         self.wait.until(expected_conditions.visibility_of_element_located((By.XPATH, self.txt_username_xpath)))
         self.driver.find_element(By.XPATH, self.txt_username_xpath).send_keys(username)
